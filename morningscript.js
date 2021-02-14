@@ -45,7 +45,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: "Welcome to the world of pain, brother. Naked.",
+        text: "Welcome to the world of pain, brother. You are naked and everything hurts.",
         options: [
             {
                 text: "Try to look around",
