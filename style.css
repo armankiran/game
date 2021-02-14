@@ -1,0 +1,86 @@
+*, *::before, ::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+#time {
+    font-size: 60px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px white;
+    animation-name: cntFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+}
+
+@keyframes cntFadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.btn-grid {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #333;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    animation-name: btnFadeIn, btnFade;
+    animation-delay: 3ms, 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-duration: 4s, 700ms;
+
+}
+
+@keyframes btnFadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+
+@keyframes btnFade {
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+.boogaloo {
+    padding-left: 25px;
+    animation-name: btnFadeIn;
+    animation-delay: 3ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+}

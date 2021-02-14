@@ -1,0 +1,88 @@
+*, *::before, ::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+#text {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    /* border-radius: 5px;
+    box-shadow: 0px 1px 1px white;
+    padding: 10px; */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px white;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #333;
+    opacity: 1;
+    animation-name: btnFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1500ms;
+}
+
+.btn:hover {
+    border-color: transparent;
+    animation-name: btnColorChange;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btnColorChange {
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 500px) {
+    #text {
+    font-size: 20px;
+}
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    @keyframes btnFadeIn {
+        from {opacity: 0}
+        to {opacity: 1}
+    }
+}
